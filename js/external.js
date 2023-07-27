@@ -10,4 +10,5 @@ let cohort = "Fenir"
 alert("Hey there, " + cohort);
 prompt("Did you have a good lunch");
 confirm("Are you sure")
+confirm("Are you sure")
 
