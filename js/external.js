@@ -31,7 +31,7 @@ A product offer can be applied only if a person buys more than 2 items, and the 
 
 
 
- */
+
 console.log("Questions 1")
 
 let LM = prompt("How many days would you like to rent the Little Mermaid")
@@ -48,4 +48,47 @@ let Overalltotal= LMtotal + BBtotal + HERCtotal
 
 alert("Total cost for all movies is: " + Overalltotal)
 
+*/
 
+alert("You worked at Google Amazon and Facebook this week")
+
+let googlerate = Number(prompt("Google rate"))
+let googlehrs = Number(prompt("How many hours did you work at Google"))
+
+let amazonrate= Number(prompt("amazon rate"))
+let amazonhrs = Number(prompt("How many hours did you work at Amazon"))
+
+let facebookrate = Number(prompt("facebook rate"))
+let facebookhrs = Number(prompt("How many hours did you work at Facebook"))
+
+let googletotal = (googlerate * googlehrs)
+let amazontotal = (amazonrate * amazonhrs)
+let facebooktotal = (facebookrate * facebookhrs)
+
+let totalpay = googletotal + amazontotal + facebooktotal
+
+
+
+alert("Total hours worked is : " + totalpay)
+
+/*
+
+
+
+let google = 6
+let amazonpph = 4
+let facebookpph = 10
+
+let hr =
+
+
+let totalgoogle = googlehourly * 6
+let totalamazon = payrate * 4
+let totalfacebook = payrate * 10
+
+
+
+let weeklytotal = googletotal+ amazontotol +facebooktotal
+
+
+ */
