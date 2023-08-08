@@ -37,6 +37,7 @@
 
     console.log('Finding and logging the index of "Earth" in the planets array.');
     //console.log(planets.indexOf('Earth'))
+ //or console.log(planets.indexof
 
     let index = planets.indexOf('Earth')
     console.log(index);
