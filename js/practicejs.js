@@ -1,6 +1,12 @@
 "use strict"
 console.log("hello practice")
 
+
+
+
+
+
+// Fucntions test practice
 //--------------------------------This Self Study---------------------------
 
 // This: can be used multiple ways:
@@ -36,24 +42,24 @@ console.log("hello practice")
 //inside the object we will create and object with the characters property do so with {} becasue its an object
 // we also added a method which is a behavior which is the list()
 //must use with paren and brakets(){}
-let game = {
-    name: "sonic the headgehog",
-    platform: "SEGA",
-    year: 1991,
-    characters: {
-        main: "sonic",
-        side: "tails",
-        enemy: "robot",
-        list() {
-            console.log(`${this.main}, ${this.side}, ${this.enemy}`) // a method
-            console.log(this)
-        }
-
-    }
-};
+// let game = {
+//     name: "sonic the headgehog",
+//     platform: "SEGA",
+//     year: 1991,
+//     characters: {
+//         main: "sonic",
+//         side: "tails",
+//         enemy: "robot",
+//         list() {
+//             console.log(`${this.main}, ${this.side}, ${this.enemy}`) // a method
+//             console.log(this)
+//         }
+//
+//     }
+// };
 
 //to target the object use name.property.method to pull from the nested object characters followed by the list method which remeber is a function therefore it requires () when loging it.
-game.characters.list() // now it returns all 3 side characters in charactaer property
+//game.characters.list() // now it returns all 3 side characters in charactaer property
 
 //to call the release property use name.release
 //game.release() // if i called the year it would come up as year undefined therefore we if we use this.year in the.

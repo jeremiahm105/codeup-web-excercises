@@ -11,11 +11,11 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    let person= {
-        firstname: "Jimmy",
-        lastname: "Bob",
-    }
-    console.log(`${person.firstname} ${person.lastname}`)
+    // let person= {
+    //     firstname: "Jimmy",
+    //     lastname: "Bob",
+    // }
+    // console.log(`${person.firstname} ${person.lastname}`)
 //
 // //option 2
 // let person ={}
@@ -34,11 +34,11 @@
      */
 
 
-    person.sayHello = function () {
-       return `Hello from ${this.firstname} ${this.lastname}!`
-    }
-
-console.log(person.sayHello())
+//     person.sayHello = function () {
+//        return `Hello from ${this.firstname} ${this.lastname}!`
+//     }
+//
+// console.log(person.sayHello())
 
 
 /** TODO:
@@ -65,23 +65,23 @@ console.log(person.sayHello())
 
 
     //this is already an array of objects  will use [] to target
-    var shoppers = [
-        {name: 'Cameron', amount: 180},
-        {name: 'Ryan', amount: 250},
-        {name: 'George', amount: 320}
-    ];
-    //
-
-    //Option 3: complete by doing a conditional before forEach to easier compile forEach
-    let qualifiesForDiscount = function (element){
-
-    if(element.amount > 200){
-        return `${element.name} is shopping with us today - they have purchased ${element.amount} which qualifies for our discount offer. ${element.name} now has to pay $${(element.amount - (element.amount * .12)).toFixed(2)}`;
-    } else {
-        return `${element.name} is here and purchased $${element.amount} - that does not qualify for our discount today, but we appreciate you shopping with us.`
-    }
-
-}
+//     var shoppers = [
+//         {name: 'Cameron', amount: 180},
+//         {name: 'Ryan', amount: 250},
+//         {name: 'George', amount: 320}
+//     ];
+//     //
+//
+//     //Option 3: complete by doing a conditional before forEach to easier compile forEach
+//     let qualifiesForDiscount = function (element){
+//
+//     if(element.amount > 200){
+//         return `${element.name} is shopping with us today - they have purchased ${element.amount} which qualifies for our discount offer. ${element.name} now has to pay $${(element.amount - (element.amount * .12)).toFixed(2)}`;
+//     } else {
+//         return `${element.name} is here and purchased $${element.amount} - that does not qualify for our discount today, but we appreciate you shopping with us.`
+//     }
+//
+// }
 
 
     // shoppers.forEach(function(element,index,array) {
@@ -94,18 +94,18 @@ console.log(person.sayHello())
     // }
 
     //option2
-        shoppers.forEach(function(element,index,array) {
-            // console.log(element)
-            //
-            // let beforeDiscount = element.amount
-            // let discount = .0
-
-            if (element.amount > 200) {
-                return `${element.name} shopping ${element.amount}`
-                //discount = beforeDiscount * 0.12
-            } else { `${element.name} shopping ${element.amount}`
-            }
-        })
+    //     shoppers.forEach(function(element,index,array) {
+    //         // console.log(element)
+    //         //
+    //         // let beforeDiscount = element.amount
+    //         // let discount = .0
+    //
+    //         if (element.amount > 200) {
+    //             return `${element.name} shopping ${element.amount}`
+    //             //discount = beforeDiscount * 0.12
+    //         } else { `${element.name} shopping ${element.amount}`
+    //         }
+    //     })
 
         //target by fucntionname(shoppers[])
     //
@@ -162,11 +162,11 @@ console.log(person.sayHello())
     //     },
     //
     // ];
-                console.log(books[0].title);
-                console.log(books[0].author.firstName + " " + books[0].author.lastName);
-
-                console.log(books[3].title);
-                console.log(books[3].author.firstName + " " + books[3].author.lastName);
+    //             console.log(books[0].title);
+    //             console.log(books[0].author.firstName + " " + books[0].author.lastName);
+    //
+    //             console.log(books[3].title);
+    //             console.log(books[3].author.firstName + " " + books[3].author.lastName);
 
     /**
      * TODO:
@@ -193,8 +193,8 @@ console.log(person.sayHello())
      *      ...
      */
 
-    for (let i = 0; i < books.length; i++) {
-    console.log("Book # " + ( i + 1 ) + " \n" +  "Title: " + books[i]. title + " \n" + books[i].author.firstname  +  books[i].author.lastname);
+    //for (let i = 0; i < books.length; i++) {
+   // console.log("Book # " + ( i + 1 ) + " \n" +  "Title: " + books[i]. title + " \n" + books[i].author.firstname  +  books[i].author.lastname);
 // could have also did line by line.
 
 //with using the for could have done multiple console.log instaed of a long sentence

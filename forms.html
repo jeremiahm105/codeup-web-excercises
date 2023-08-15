@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Forms</title>
+    </head>
+    <body>
+        <form action="https://request-inspector.glitch.me" method="GET">
+
+            <header>
+                <h1 style="text-align:center" text-decorat>Register With Us</h1>
+            </header>
+            <hr>
+
+            <section>
+                <strong><label for="email"><br></br>Email:</br></label></strong>
+                <input id="email" name="email" type="text"placeholder="Email Address" required>
+
+                <br><br>
+
+                <strong><label for="password"><br>Password:</br></label></strong>
+                <input id="password" name="password" type="password" placeholder="Password" required>
+                <br><br>
+
+                <strong><label><br>Biography:</br></strong>
+                    <textarea maxlength="500" name="bio" placeholder="Insert Bio"></textarea>
+                </label>
+                <br>
+
+            </section>
+
+            <main>
+                <h3> How did you hear about us? </h3>
+                <label>
+                    <input type="radio" name="q1" value="billboard">
+                    Billboard <br>
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="Radio Advertisement">
+                    Radio Advertisement<br>
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="Internet">
+                    Internet<br>
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="Other"checked>
+                    Other<br>
+                </label>
+                <br>
+
+
+                <h3>Which web browser are you currently using?</h3>
+
+                <select required name="web browser preference">
+                    <option value="" disabled>Please select an option</option>
+                    <option value="Chrome">Google Chrome</option>
+                    <option value="FirFox">FirFox</option>
+                    <option value="Edge">Microsoft Edge</option>
+                </select>
+                <br>
+               <p><button type="submit">Submit</button></p>
+
+            </main>
+
+        </form>
+    </body>
+</html>

@@ -10,26 +10,26 @@
 
 
 
-// let userInput;
-// while(true){
-//     userInput = Number(prompt("Please enter an odd number between 1 and 50"));
-//
-//     if(userInput >= 1 && userInput <= 50 && userInput % 2 === 1){
-//         break;
-//     } else {
-//         alert("Sorry, the number is invalid. Please try again.")
-//     }
-// }
-//
-// console.log("Number to skip is; " + userInput);
-//
-// for(let i = 1; i <= 50; i +=2) {
-//     if(i === userInput) {
-//         console.log("Yikes! Skip that number: " + i);
-//         continue;
-//     }
-//     console.log("Here is an odd number: " + i);
-// }
+let userInput;
+while(true){
+    userInput = Number(prompt("Please enter an odd number between 1 and 50"));
+
+    if(userInput >= 1 && userInput <= 50 && userInput % 2 === 1){
+        break;
+    } else {
+        alert("Sorry, the number is invalid. Please try again.")
+    }
+}
+
+console.log("Number to skip is; " + userInput);
+
+for(let i = 1; i <= 50; i +=2) {
+    if(i === userInput) {
+        console.log("Yikes! Skip that number: " + i);
+        continue;
+    }
+    console.log("Here is an odd number: " + i);
+}
 
 
 

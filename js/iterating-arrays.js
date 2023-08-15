@@ -6,37 +6,37 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    let names = ["Jim", "Bob", "Lisa","Russ"]
+    //let names = ["Jim", "Bob", "Lisa","Russ"]
 
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
      * array.
      */
-    console.log(names);
-    console.log("--------------------------")
+    // console.log(names);
+    // console.log("--------------------------")
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
-    let namess = ["Jim", "Bob", "Lisa","Russ"];
-
-    console.log('There are ' + namess.length + ' names in the array');
-
-    console.log('The first name is: ' + namess[0]);
-    // The first name is: Jim
-
-    console.log('The second name is: ' + namess[1]);
-    // The second shape is: Bob
-
-    console.log('The third name is: ' + namess[2]);
-    // The third shape is: Lisa
-
-    console.log('The fourth name is: ' + namess[3]);
-    // The fourth shape is: Russ
-
-    console.log("-----------------")
+    // let namess = ["Jim", "Bob", "Lisa","Russ"];
+    //
+    // console.log('There are ' + namess.length + ' names in the array');
+    //
+    // console.log('The first name is: ' + namess[0]);
+    // // The first name is: Jim
+    //
+    // console.log('The second name is: ' + namess[1]);
+    // // The second shape is: Bob
+    //
+    // console.log('The third name is: ' + namess[2]);
+    // // The third shape is: Lisa
+    //
+    // console.log('The fourth name is: ' + namess[3]);
+    // // The fourth shape is: Russ
+    //
+    // console.log("-----------------")
 
 
     /**
@@ -44,10 +44,10 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-    for (let i = 0; i < names.length; i++) {
-        console.log(`The name at index ${i} is ${namess[i]}`)
-    }
-    console.log("-----------------------")
+    // for (let i = 0; i < names.length; i++) {
+    //     console.log(`The name at index ${i} is ${namess[i]}`)
+    // }
+    // console.log("-----------------------")
     //
     // /**
     //  * TODO:
@@ -56,7 +56,7 @@
     //
     // namess.forEach(function(namess){
     //     console.log(`Here are all the names: ${namess}`)
-    console.log("----------------------")
+    // console.log("----------------------")
 
 
     // /**
@@ -73,25 +73,25 @@
     //  *  > last([1, 2, 3, 4, 5]) // return 5
     //  */
     //let namess = ["Jim", "Bob", "Lisa","Russ"];
-
-    function first(array) {
-      return array[0]
-        // console.log("")
-    }
-    console.log(first(namess))
-
-    function second(array) {
-        return array[1]
-        // console.log("")
-    }
-    console.log(second(namess))
-
-    function last(array) {
-        return array[3]
-        // console.log("")
-    }
-
-    console.log(last(namess));
+    //
+    // function first(array) {
+    //   return array[0]
+    //     // console.log("")
+    // }
+    // console.log(first(namess))
+    //
+    // function second(array) {
+    //     return array[1]
+    //     // console.log("")
+    // }
+    // console.log(second(namess))
+    //
+    // function last(array) {
+    //     return array[3]
+    //     // console.log("")
+    // }
+    //
+    // console.log(last(namess));
 
     //another option for question 3
         // function last(array) {
