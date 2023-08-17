@@ -11,7 +11,7 @@
 //Link: <link> eleemt is used to link external stylesheets
 //Script: <script> used to link external javascript files.
 //-------------Examples of Link
-//<link rel="stylesheet" href="style.css">
+//<link rel="stylesheet" href="intro-css-lecture.css">
     //<script src="script.js"></script>
 
 

@@ -1,0 +1,52 @@
+h2 {
+    background-color: #9d9de0;
+    height: fit-content;
+    width: fit-content;
+    padding: 0,40px
+    border: 5px solid black;
+    border-color: red;
+    border-style: dotted;
+    border-radius: 100px;
+
+    margin: 0
+    /*aspect-ratio: 1/1;*/
+    /*border-radius: 100px;  !* for circle border*/
+    /*border: width;
+    /*padding: 40px;*/
+    /*padding-right: 5em;
+    padding is inside the border
+    */
+
+/*    surrounds the padding*/
+}
+
+/*h3 {*/
+/*    margin: 50px, auto*/
+/*}*/
+
+div {
+    background-color: red;
+    width: 420px;
+    height: 240px;
+    border: 5px solid black;
+    margin: 0 auto;
+    padding 20px 50px;
+}
+
+/*span allows you to specialize around a specific word or words*/
+/*css normalize removes all styles*/
+/*css reset reset browser defaults*/
+
+/*always 0 everything out*/
+         css reset
+
+         * {
+             margin 0:
+             padding 0
+         } boxsizing: border-box    /*removes padding from total width apply first before any styling
+/*create in and put at beginning of any css style sheet
+
+to import a css @import "reset.css"*/
+span {
+    color: green
+}

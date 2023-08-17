@@ -1,0 +1,87 @@
+
+/* preferred*/
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* box sizing can be done multiple ways
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+or
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*/
+
+/* Resets.css or your custom stylesheet */
+
+/* Apply to all images
+max-width: 100%. This is done to keep large images from overflowing, if they're placed in a container that isn't wide enough to contain them.
+display removes the inline magic space” that browsers add with line-height
+
+
+*/
+img {
+    display: block; /* Change display to block */
+    max-width: 100%; /* Prevent images from growing wider than parent */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*Use a more-intuitive box-sizing model. keeps content from overflowing*/
+/*the * wildcard selector allows it to be used with all elements*/
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+  5. dont apply to heading makes it to large
+  6.This is a technique web kit aims to make text easier to read, by leveraging the R/G/B lights within each pixel.
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+  If we want to avoid this auto-zoom behavior, the inputs need to have a font-size of at least 1rem / 16px.
+  This fixes the auto-zoom issue, but it's a band-aid. Let's address the root cause instead: form inputs shouldn't have their own typographical styles!
+
+*/
+/*
+by default, buttons and inputs don't inherit typographical styles from their parents. Instead, they have their own weird styles.
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+  It's generally only needed if you use a JS framework like React.
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
