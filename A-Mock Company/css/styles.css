@@ -1,0 +1,69 @@
+/*@import "reset.css";*/
+/*@import "layout.css";*/
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+    --clr-dark: #07043b;
+    --clr-light: #575988;
+    --clr-secondary: #f65f8;
+    --border-radius: 3.13px;
+    --clr-white: #C2C2C2;;
+}
+
+
+body {
+    font-family: 'Lobster', cursive;
+}
+
+.logo-name {
+
+}
+
+p {
+    font-weight: bold;
+    font-size: 16px;
+
+}
+/* outlines the box*/
+input[type] {
+    border: 2px solid orangered;
+}
+
+/*targets the type= text characters and box only*/
+input[type="text"] {
+    background-color: #24e579;
+}
+
+input[type="email"] {
+    background-color: #e66465;
+}
+
+input[type="button"] {
+    border: 2px solid saddlebrown;
+    border-radius: 100px;
+    background-color: #2F65F8;
+    color: white;
+    font-weight: bold;
+    /* cursor pointer changes the symbol that appears when you hover over the click me input*/
+    cursor:pointer;
+}
+
+/*attribute starts with and is case sensitive*/
+p[title^="I"] {
+    color: green;
+}
+
+/*attribute ends with */
+p[title$="dog"] {
+    color: red;
+}
+
+
+/*attribute contains word will style the entire text*/
+p[title~="slow"] {
+    text-decoration: underline;
+}
+
+/* to target input place attribute name in square brackets followed by curly brackets
+
+to target the value do the same thing but insert the value */
