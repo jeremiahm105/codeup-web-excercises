@@ -96,11 +96,38 @@ img {
 
 }
 
-@media (max-width: 700px) {
-    .row {
+/*max width creen can be if it goes under this apply */
+/*@media (max-width: 700px) {*/
+/*    .row {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
+
+/*max width screen can be if it goes under this apply now it breaks at all rows and content goes under*/
+
+@media screen and (max-width: 900px) {
+    .hero .row {
         flex-direction: column;
     }
+    .hero.column:has(img.hero-img) {
+        order: -1;
+    }
 }
+
+@media print {
+    .column:(img.hero-img) {
+        display: none;
+    }
+}
+
+/*.hero.column:nth-child(2){*/
+/*    order: -1;*/
+/*}*/
+
+/*.hero.column:has(img.hero-img) {}{*/
+/*    order: -1;*/
+/*}*/
+
 
 
 /*@media (max-width: 1536px) {*/
