@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<!--data-bs-theme="dark"-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootsstrap Introduction Exercise</title>
+    <!-- BOOTSTRAP CSS FILE -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- CUSTOM STYLESHEET -->
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body>
+<div class="page-wrapper">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pizza Bar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Order Online</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                </ul>
+
+                <a class="navbar-brand" href="#">
+                    <img src="user-plus-solid.svg" alt="user-signup" width="30" height="24">
+                </a>
+                <a class="nav-link" href="#">Sign Up <i class="bi-alarm"></i></a>
+
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron d-flex justify-content-center align-items-center">
+        <div class="light-title-bar">
+            <h2>Welcome to Pizza World</h2>
+        </div>
+    </div>
+        <div class="container">
+            <h3>Build Your Own Pizza</h3>
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tab1" data-bs-toggle="list">Sauce and Crust</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab2" data-bs-toggle="list">Cheese and Sauce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tab3" data-bs-toggle="list">Toppings</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab1" role="tabpanel">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Choose Size and Crust</a>
+                        </li>
+                    </ul>
+                    <div class="card">
+                        <div class="card-header">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Size</h5>
+                            <div class="list-group">
+                                <label class="list-group-item">
+                                    <input type="radio" name="size" value="small">
+                                    Small
+                                </label>
+                                <label class="list-group-item">
+                                    <input type="radio" name="size" value="medium">
+                                    Medium
+                                </label>
+                                <label class="list-group-item">
+                                    <input type="radio" name="size" value="large">
+                                    Large
+                                </label>
+                                <h5 class="card-title">Crust</h5>
+                                <div class="list-group">
+                                    <label class="list-group-item">
+                                        <input type="radio" name="crust" value="thin">
+                                        Thin
+                                    </label>
+                                    <label class="list-group-item">
+                                        <input type="radio" name="crust" value="thick">
+                                        Thick
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <button class="btn btn-primary">Next</button>
+                    </div>
+                </div>
+<!--                    pane 2-->
+                <div class="tab-pane" id="tab2" role="tabpanel">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Choose Cheese and Sauce</a>
+                        </li>
+                    </ul>
+                    <div class="card mt-3">
+                        <div class="card-header">
+                            Choose Cheese and Sauce
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Cheese</h5>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Light</option>
+                                    <option>Normal</option>
+                                    <option>Extra</option>
+                                    <option>Double</option>
+                                </select>
+                            </div>
+                            <h5 class="card-title">Sauce</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sauce" value="tomato">
+                                <label class="form-check-label">Tomato</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sauce" value="marinara">
+                                <label class="form-check-label">Marinara</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sauce" value="bbq">
+                                <label class="form-check-label">BBQ</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sauce" value="alfredo">
+                                <label class="form-check-label">Alfredo</label>
+                            </div>
+                            <h5 class="card-title mt-3">Sauce Amount</h5>
+                            <div class="btn-group" role="group" aria-label="Sauce Amount">
+                                <button type="button" class="btn btn-secondary">Light</button>
+                                <button type="button" class="btn btn-secondary">Normal</button>
+                                <button type="button" class="btn btn-secondary">Extra</button>
+                            </div>
+                        </div>
+                        <div class="card-footer text-right">
+                            <button class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+
+<!--                    pane 3-->
+                    <div class="tab-pane" id="tab3" role="tabpanel">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Choose Toppings</a>
+                            </li>
+                        </ul>
+                        <div class="card mt-3">
+                            <div class="card-header">
+                                Choose Toppings
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Toppings</h5>
+                                <div class="list-group">
+                                    <label class="list-group-item">
+                                        <input type="checkbox" name="topping" value="pepperoni">
+                                        Pepperoni
+                                    </label>
+                                    <label class="list-group-item">
+                                        <input type="checkbox" name="topping" value="mushrooms">
+                                        Mushrooms
+                                    </label>
+                                    <label class="list-group-item">
+                                        <input type="checkbox" name="topping" value="onions">
+                                        Onions
+                                    </label>
+                                    <div class="card-footer text-right">
+                                        <button class="btn btn-primary">Checkout</button>
+                                    </div>
+                                </div>
+                            </div>
+            </div>
+        </div>
+<!-- BOOTSTRAP JS FILE -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous">
+
+</script>
+</body>
+</html>
