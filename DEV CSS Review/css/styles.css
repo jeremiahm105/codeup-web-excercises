@@ -305,20 +305,20 @@ to target the value do the same thing but insert the value */
 /*}*/
 
 /*MARGIN AND PADDING*/
-body {
-    margin: 0;
-    padding: 0;
-}
+/*body {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
 
-img {
-    width: 200px;
-    /*margin-left: 50px;*/
-    /*margin-bottom: 10px;*/
-    /*display block used to center line items*/
-    display: block;
-    /*the auto gives us equal spacing where used so in this case left/right*/
-    margin: 20px auto;
-}
+/*img {*/
+/*    width: 200px;*/
+/*    !*margin-left: 50px;*!*/
+/*    !*margin-bottom: 10px;*!*/
+/*    !*display block used to center line items*!*/
+/*    display: block;*/
+/*    !*the auto gives us equal spacing where used so in this case left/right*!*/
+/*    margin: 20px auto;*/
+/*}*/
 
 /*style background to each image title by adding id to each title h1*/
 /*#goku {*/
@@ -334,18 +334,18 @@ img {
 /*    margin-bottom: 50px;*/
 /*}*/
 
-h2.title {
+/*h2.title {*/
 
-}
+/*}*/
 
-p {
-    //border: 2px solid green
-}
-.border-div {
-    background-color: lightgrey;
-    width: 100px;
-    height: 100px;
-    margin: 50px;
+/*p {*/
+/*    //border: 2px solid green*/
+/*}*/
+/*.border-div {*/
+/*    background-color: lightgrey;*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    margin: 50px;*/
 /*    using border*/
 /*    border-width: 10px;*/
 /*    border-color: red;*/
@@ -367,9 +367,9 @@ p {
     /*//border-top-left-radius: 10px;*/
     /*//border-top-right-radius: 30px;*/
     /*//border-bottom-right-radius: 25px;*/
-    border-radius: 10px 30px 100px  3px;
-    border-right-color: blue;
-}
+    /*border-radius: 10px 30px 100px  3px;*/
+    /*border-right-color: blue;*/
+/*}*/
 
 /*BOX MODEL*/
 p {
@@ -389,12 +389,50 @@ p {
 
 /*applying width and height to element*/
 
-p {
-    border: 2px solid red;
-    display: inline-block;
-    padding: 5px;
-    width: 300px;
-    margin-left: 20px;
-    text-align: center;
+/*p {*/
+/*    border: 2px solid red;*/
+/*    display: inline-block;*/
+/*    padding: 5px;*/
+/*    width: 300px;*/
+/*    margin-left: 20px;*/
+/*    text-align: center;*/
     /* the total content is 300 width but the total element is 332 300 +padding lr10 border 2 margin left 20*/
+/*}*/
+
+/*CSS UNITS ABSOLUTE AND RELATIVE*/
+
+/*absolute are fixed*/
+/*relative is based off container or parent element and are fluid*/
+/*em relative to container*/
+/*% relative to element*/
+
+div {
+    height: 10px;
+}
+
+#absolute {
+    width: 50px;
+    background-color: purple;
+}
+
+#relative {
+    /*viewport is essentially the screen size full width is 100vw or vh*/
+    /*the relative div is responsive*/
+    /*width: 50vw;*/
+    /*th 50vh and width 50% essentially do the same thing because under same parent element/root element*/
+    width: 50%;
+    background: lightgreen;
+}
+
+/*most popular relative units are em rem vh %*/
+/* with this example the the new parent element is outer-div which has a fixed value so the relative container % will go off it and is 50px*/
+#outer-div {
+    width: 100px;
+    border:2px solid red;
+}
+
+
+/*1em = 16px as default 2em would be 32px*/
+p {
+    font-size: 5vw;
 }
