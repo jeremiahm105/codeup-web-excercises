@@ -276,15 +276,97 @@ to target the value do the same thing but insert the value */
 /*}*/
 /*PADDING*/
 /*  */
-p {
-    background-color: red;
-    /*padding-top: 50px;*/
-    /*padding-right: 5px;*/
-    /*padding-left: 20px;*/
-    /*padding-bottom: 5px;*/
-    /*same as above top bottom left right*/
-    /*padding: 50px 20px 3px 10px;*/
-    /*two sets 1: top/bottom 2: left/right*/
-    padding: 40px 5px;
+/*p {*/
+/*    background-color: red;*/
+/*    !*padding-top: 50px;*!*/
+/*    !*padding-right: 5px;*!*/
+/*    !*padding-left: 20px;*!*/
+/*    !*padding-bottom: 5px;*!*/
+/*    !*same as above top bottom left right*!*/
+/*    !*padding: 50px 20px 3px 10px;*!*/
+/*    !*two sets 1: top/bottom 2: left/right*!*/
+/*    !*padding: 40px 5px;*!*/
+/*    */
+/*}*/
+
+/*MARGIN*/
+/*PIMO-padding inside margin outside*/
+/* remove default margin*/
+
+/*body {*/
+/*    margin: 0;*/
+
+/*}*/
+/*margin affects the bock level padding does not*/
+/*p {*/
+/*    background-color: red;*/
+/*    !*margin: 20px;*!*/
+/*    margin: 30px 100px;*/
+/*}*/
+
+/*MARGIN AND PADDING*/
+body {
+    margin: 0;
+    padding: 0;
 }
 
+img {
+    width: 200px;
+    /*margin-left: 50px;*/
+    /*margin-bottom: 10px;*/
+    /*display block used to center line items*/
+    display: block;
+    /*the auto gives us equal spacing where used so in this case left/right*/
+    margin: 20px auto;
+}
+
+/*style background to each image title by adding id to each title h1*/
+/*#goku {*/
+/*background-color: #7e7ec9;*/
+/*}*/
+
+/*#brolly {*/
+/*    background-color: green;*/
+/*}*/
+/*!*increasing the space inside element on left*!*/
+/*h2 {*/
+/*    padding-left: 30px;*/
+/*    margin-bottom: 50px;*/
+/*}*/
+
+h2.title {
+
+}
+
+p {
+    border: 2px solid green
+}
+.border-div {
+    background-color: lightgrey;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+/*    using border*/
+/*    border-width: 10px;*/
+/*    border-color: red;*/
+    /*border wil not show without a style*/
+    /*border-style: ridge;*/
+
+/*     could also write as width-style -color*/
+/*    border: 10px ridge red;*/
+/*    could also designate a separate width, color and style per side just like padding and margin*/
+/*    border-width: 10px 5px 2px 1px;*/
+/*    border-color: yellow green red blue;*/
+/*    border-style: solid ridge dotted dashed;*/
+    border: 10px solid red;
+    /*border radius curves the border*/
+    /*if width and height exactly the same the border radius 50% will give a perfect circle a*/
+    /*border-radius: 50%;*/
+    //border-radius: 10px;
+    /*only styles the designated corner and cab be used on line*/
+    //border-top-left-radius: 10px;
+    //border-top-right-radius: 30px;
+    //border-bottom-right-radius: 25px;
+    //border-radius: 10px 30px 100px  3px;
+    border-right-color: blue;
+}
