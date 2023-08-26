@@ -19,5 +19,6 @@ main.h2{
 a.nav-link {
     display: flex;
     justify-content: right;
-    /*border: 2px solid red;*/
+    border: 5px solid black
 }
+
