@@ -2,68 +2,289 @@
 /*@import "layout.css";*/
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-:root {
-    --clr-dark: #07043b;
-    --clr-light: #575988;
-    --clr-secondary: #f65f8;
-    --border-radius: 3.13px;
-    --clr-white: #C2C2C2;;
-}
+/*:root {*/
+/*    --clr-dark: #07043b;*/
+/*    --clr-light: #575988;*/
+/*    --clr-secondary: #f65f8;*/
+/*    --border-radius: 3px;*/
+/*    --clr-white: #C2C2C2;;*/
+/*}*/
 
 
 body {
     font-family: 'Lobster', cursive;
 }
 
-.logo-name {
 
-}
+/*p {*/
+/*    font-weight: bold;*/
+/*    font-size: 16px;*/
 
-p {
-    font-weight: bold;
-    font-size: 16px;
-
-}
+/*}*/
 /* outlines the box*/
-input[type] {
-    border: 2px solid orangered;
-}
+/*input[type] {*/
+/*    border: 2px solid orangered;*/
+/*}*/
 
 /*targets the type= text characters and box only*/
-input[type="text"] {
-    background-color: #24e579;
-}
+/*input[type="text"] {*/
+/*    background-color: #24e579;*/
+/*}*/
 
-input[type="email"] {
-    background-color: #e66465;
-}
+/*input[type="email"] {*/
+/*    background-color: #e66465;*/
+/*}*/
 
-input[type="button"] {
-    border: 2px solid saddlebrown;
-    border-radius: 100px;
-    background-color: #2F65F8;
-    color: white;
-    font-weight: bold;
-    /* cursor pointer changes the symbol that appears when you hover over the click me input*/
-    cursor:pointer;
-}
+/*input[type="button"] {*/
+/*    border: 2px solid saddlebrown;*/
+/*    border-radius: 100px;*/
+/*    background-color: #2F65F8;*/
+/*    color: white;*/
+/*    font-weight: bold;*/
+/*    !* cursor pointer changes the symbol that appears when you hover over the click me input*!*/
+/*    cursor:pointer;*/
+/*}*/
 
 /*attribute starts with and is case sensitive*/
-p[title^="I"] {
-    color: green;
-}
+/*p[title^="I"] {*/
+/*    color: green;*/
+/*}*/
 
 /*attribute ends with */
-p[title$="dog"] {
-    color: red;
-}
+/*p[title$="dog"] {*/
+/*    color: red;*/
+/*}*/
 
 
 /*attribute contains word will style the entire text*/
-p[title~="slow"] {
-    text-decoration: underline;
-}
+/*p[title~="slow"] {*/
+/*    text-decoration: underline;*/
+/*}*/
+
 
 /* to target input place attribute name in square brackets followed by curly brackets
 
 to target the value do the same thing but insert the value */
+
+/*Combo Selectors*/
+
+/*Select multiple elements by separate by comma*/
+
+/*p, button, h1{*/
+/*    color: salmon;*/
+/*}*/
+
+/*-------------------------Selecting elements inside elements*/
+/*-----------------------Descendent elements uses a space*/
+/*this will select all the p elements inside the id outer div. in this case outer-div is the grandparent the inner div is the parent and the p is the child*/
+/*when ever using descending no matter how many levels deep always use the outer element first to establish the css style the list the element you want changed*/
+/*#outer-div p {*/
+/*    color: #2F65F8;*/
+/*}*/
+
+/* ------------------Direct descendent uses the greater than > symbol to chose a element directly inside another element use the > symbol*/
+/*now im only selecting the p inside the inner div*/
+
+/*#inner-div > p {*/
+/*    color: green;*/
+/*}*/
+/*SELECTS ALL ELEMENTS PLACED IMMEDIATELY AFTER AN ELEMENT*/
+/*style all p elements immediately after h3 */
+/*syntax reads right to left*/
+/*h3 + p{*/
+/*    color: #9198e5;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*SELECTS ALL ELEMENTS PLACED IMMEDIATELY BEFORE AN ELEMENT*/
+/*now were selecting all h4 elements placed immediately before <p>*/
+/* syntax reads right to left*/
+
+/*p ~ h4 {*/
+/*    color: #a91128;*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*--------------------------------PSEUDO CLASSES uses the colon :*/
+/*all pseudo classes use the colon :*/
+/*to style the anchor link*/
+/*a:link {*/
+/*    text-decoration: underline;*/
+/*}*/
+/*to style the hover*/
+/*a:hover {*/
+/*    color: orangered;*/
+/*}*/
+/*to style active link when clicked and held down by mouse*/
+/*a:active {*/
+/*    color: #33ff57;*/
+/*}*/
+/*a visited link*/
+/*a:visited {*/
+/*    !*color: #6c4242;*!*/
+/*}*/
+
+/*styling a checkbox only when checked*/
+/*input[type="checkbox"]:checked {*/
+/*    outline: 10px solid red;*/
+/*}*/
+
+/*to disable, must also place the disabled tag on the html input element*/
+
+/*input[type="text"]:disabled {*/
+/*    background-color: greenyellow;*/
+/*}*/
+
+/* Focus: to change background color when the user focuses on it or clicks on it*/
+/*only uses the id name in html and word focus*/
+/*#cool:focus {*/
+/*    background-color: aqua;*/
+/*}*/
+
+/*to target a specific element use Nth child*/
+/*p:nth-child(3) {*/
+/*    color: darkgreen;*/
+/*}*/
+
+/*PSEUDO ELEMENTS use :: and a selector of your choice*/
+/*i want to style the first letter of the paragraph*/
+
+/*#paragraph::first-letter {*/
+/*    color: lightgreen;*/
+/*    font-size: 50px;*/
+/*    text-shadow: 1px 1px 3px grey;*/
+/*}*/
+
+/*i want to style the first line of the paragraph*/
+/*#paragraph::first-line {*/
+/*    color: cornflowerblue;*/
+/*    font-size: 20px;*/
+/*    text-shadow: 1px 1px 3px grey;*/
+
+/*}*/
+
+/*to select a pseudo element on it own use two colons and word selection and it styles the highlighting of th browser*/
+/*changes color if i click on scroll over the text*/
+/*::selection {*/
+/*    color: white;*/
+/*    background-color: red;*/
+/*}*/
+/* selecting class plus elements and placing something immediately after content. must be followed by content "whatever we want to appear after element"*/
+/*.plus::after {*/
+/*    content: "+";*/
+/*}*/
+/*placing something before */
+/*.plus::before {*/
+/*    content: "-";*/
+/*}*/
+
+/*cascading style sheets cs style sheet and html reads from top to bottom so newest style overrides the others*/
+/*styling will occur bases of where they appear in the html style attribute will take precedence over both inline and external each style will be executed as it comes up*/
+/*.cas {*/
+/*    color: blue;*/
+/*}*/
+
+/*.cas {*/
+/*    color: red;*/
+/*}*/
+
+/*Specificity and Importance*/
+/*selecting the anchor tag*/
+/*a {*/
+/*    color: #d9bcbc; */
+/*}*/
+/*!* more specific than just a to select go from outer to inner element*!*/
+/*li a {*/
+/*    color: forestgreen;*/
+/*}*/
+/*!*more specific than li a*!*/
+/*ul li a {*/
+/*    color: #e1e16f;*/
+/*}*/
+
+/*when using class and id follow the same order most outer element or class to inner*/
+/*the use of the class makes the element more specific*/
+/*.ul li a {*/
+/*    color: salmon;*/
+/*}*/
+
+/*!**!*/
+/*ul li a {*/
+/*    color: aquamarine;*/
+/*}*/
+
+/*!* id element # takes precedence over both class because it can only be one id name*!*/
+/*#aa {*/
+/*    color: #9198e5;*/
+/*}*/
+
+/*given the body and id element and class*/
+/*order is ID > Class > Element*/
+/*style from outer to inner to be more specific */
+/*body {*/
+/*    background-color: red;*/
+/*}*/
+/*.body-class {*/
+/*    background-color: blue;*/
+/*}*/
+
+/*#body {*/
+/*    background-color: #24e579;*/
+/*}*/
+
+/*the !important declaration*/
+/*allows you to override all specificity and cascading just place word !importance after value*/
+/*not recommended to use*/
+/*body {*/
+/*    background-color: red !important;*/
+/*}*/
+
+
+/*----------------------------------------INHERITANCE*/
+
+/*all files with in container id will be styled*/
+/*#container {*/
+/*    color: red;*/
+/*}*/
+
+/*it only makes sense to inherit font styles and colors not layout like padding and margin*/
+/*h1, p {*/
+/*    text-align: center;*/
+/*    font-size: 20px;*/
+/*    color: green;*/
+/*}*/
+/*set value to inherit from container targeting inherit p*/
+/*.inherit {*/
+/*    color: inherit;*/
+/*}*/
+
+/*initial resets the color to default*/
+/*.initial {*/
+/*    color: initial;*/
+/*}*/
+/*UNSET*/
+/*if element is naturally inherited its act like inherit otherwise it acts like initial so this class will become red again*/
+/*.unset {*/
+/*    color: unset;*/
+/*}*/
+
+/*REVERT*/
+/*IF USER DEFINED STYLE REVERT BACK TO IT OTHERWISE USE DEFAULT STYLING */
+
+/*.revert {*/
+/*    color: revert;*/
+/*}*/
+/*PADDING*/
+/*  */
+p {
+    background-color: red;
+    /*padding-top: 50px;*/
+    /*padding-right: 5px;*/
+    /*padding-left: 20px;*/
+    /*padding-bottom: 5px;*/
+    /*same as above top bottom left right*/
+    /*padding: 50px 20px 3px 10px;*/
+    /*two sets 1: top/bottom 2: left/right*/
+    padding: 40px 5px;
+}
+
