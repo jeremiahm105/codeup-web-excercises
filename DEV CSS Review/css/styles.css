@@ -436,3 +436,70 @@ div {
 p {
     font-size: 5vw;
 }
+/*TEXT FORMATTING*/
+
+
+
+.title {
+    text-align: justify;
+}
+
+#sentence {
+    /*text align*/
+    text-align: center;
+    text-align: left;
+    text-align: right;
+    text-align: justify;
+
+    /*TEXT DECORATION*/
+    /*text-decoration: overline wavy red;*/
+    text-decoration: underline wavy green;
+    /*text-decoration: line-through wavy blue;*/
+    /*text-decoration-color: blue;*/
+    /*text-decoration-line: overline;*/
+    /*text-decoration-style: dashed;*/
+
+/*    TEXT INDENT only the first line*/
+    text-indent: 50px;
+
+/*    TEXT TRANSFORM*/
+/*    capitalize each word*/
+/*    text-transform: capitalize;*/
+    text-transform: uppercase;
+
+
+}
+/*text decoration used mainly when styling links*/
+
+a {
+    text-decoration: none;
+}
+
+
+#paragraph {
+    text-indent: 50px;
+    /*TEXT OVERFLOW
+    --only works if used with overflow: hidden and white-space: nowrap*/
+    /*with this the text no longer wraps*/
+    overflow: hidden;
+    white-space: nowrap;
+    border: 5px solid red;
+    background-color: lightgray;
+    /*cuts off the extra*/
+    /*text-overflow: clip;*/
+    /*put 3 periods at end ... */
+    text-overflow:ellipsis  ;
+}
+
+h4 {
+    /*TEXT SHADOW*/
+    text-align: center;
+    font-size: 100px;
+    margin-top: 50px;
+    /*require 3 number value and a color 1: far to right, 2: far to bottom, #:blurry 4:color*/
+    text-shadow:2px 2px 5px yellow ;
+    word-spacing: 100px;
+    letter-spacing: 10px;
+
+
+}
