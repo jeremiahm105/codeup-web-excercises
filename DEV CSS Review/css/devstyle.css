@@ -1,0 +1,143 @@
+/*css grid*/
+/*2 dimensional use both rows and columns*/
+
+/* CONTAINER */
+#container {
+    width: 95vw;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    outline: 8px solid #4834d4;
+    /*to make a container into a grip use display grid which make all the items inside grid items*/
+    display: grid;
+    /*gtc and gtr*/
+    /*these specify columns and rows but also size*/
+    /*remember 1 column is 1 vertical row*/
+    /*the number of values in the g-t-c specifies the number of columns abd their size i width*/
+    /**/
+    //grid-template-columns: 200px 200px;
+    /*if we want colums to fill up extra space place a aut after the values and the last column will consume all the space.*/
+    //grid-template-columns: 200px 200px auto;
+    /*can also use %*/
+    //grid-template-columns: 50% 25% 25%;
+    /*preferred unit is fractional unit divides variable space equally as a fraction*/
+    //grid-template-columns: 1fr 1fr 1fr;
+    /*when using the fr value we can use repeat function and specify values in parenthesis number 1 is how many time we want it to repeat number is the size */
+    grid-template-columns: repeat(3, 1fr);
+    auto fill automatiall yfills empty space
+    //grid-template-columns: repeat(auto-fill);
+    /*min-max allows us to specify a min value we want our column  to have*/
+    grid-template-rows: 100px 50px;
+
+}
+
+/* ITEM */
+.item-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+.item-one:hover {
+    color: #fff;
+}
+
+.item-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+.item-two:hover {
+    color: #fff;
+}
+.item-three {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+.item-three:hover {
+    color: #fff;
+}
+.item-four {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+.item-four:hover {
+    color: #fff;
+}
+.item-five{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+.item-five:hover {
+    color: #fff;
+}
+.item-six {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+.item-six:hover {
+    color: #fff;
+}
