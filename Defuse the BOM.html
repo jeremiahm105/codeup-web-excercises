@@ -30,7 +30,8 @@
 
         detonationTimer--;
     }
-    //placed the setInterval in a var
+    //placed the setInterval in a var to pass through the clearInterval function
+
     let intervalID =setInterval(updateTimer, 1000);
 
 
@@ -39,6 +40,7 @@
     //to solve i took the interval ID variable and passed it into the clearInterval()
     function defuseTheBOM() {
         clearInterval(intervalID)
+
     }
 
     // Don't modify anything below this line!
