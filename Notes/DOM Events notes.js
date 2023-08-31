@@ -76,6 +76,37 @@
 // var btn2 = document.getElementById('btn2');
 // btn2.addEventListener('click', remover);
 
+// Arrow function syntax
+// let handler = () => {
+//     alert("you clicked")
+// }
+
+let button = document.getElementById("btn1")
+button.addEventListener('click', handler)
+
+// EXAMPLE OF EVENT WITH DOCUMENT
+
+// can also add event listener to document itself
+// so when user click on button or document run the function example the event triggers
+// document.addEventListener('click', handler)
+
+// KEYUP EXAMPLE key up (release key) and key down (when you press down on key)
+// <input type="text" id="text/input" in html body then add to js
+let input1 = document.getElementById("textInput")
+
+// Arrow function wtih keyup example      keypress only register letters and numbers
+input1.addEventListener("keyup", handler)
+
+// the key being pressed will show up on the js console in real time
 
 
+//CHANGE EVENT is when the user is interacting liking checking focus is when the pointer in clicked into input on a webpage
 
+<input type="checkbox" id="checkboxInput" checked>
+
+    input type="text" id="textInput>"
+
+form submission
+
+js submit event
+let form1 = document.querySelectorAll(#myForm)
