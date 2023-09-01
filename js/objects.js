@@ -11,18 +11,18 @@
      *  > console.log(person.firstName) // "Rick"
      *  > console.log(person.lastName) // "Sanchez"
      */
-    // let person= {
-    //     firstname: "Jimmy",
-    //     lastname: "Bob",
-    // }
-    // console.log(`${person.firstname} ${person.lastname}`)
-//
-// //option 2
-// let person ={}
-//     person.firstname = "Jay",
-//     person.lastname = "matt",
-//
-//     `${person.firstname} ${person.lastName}
+    let person= {
+        firstname: "Jimmy",
+        lastname: "Bob",
+    }
+    console.log(`${person.firstname} ${person.lastname}`)
+
+//ot notation
+let person ={}
+    person.firstname = "Jay",
+    person.lastname = "matt",
+
+    `${person.firstname} ${person.lastName}
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -33,13 +33,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-
 //     person.sayHello = function () {
 //        return `Hello from ${this.firstname} ${this.lastname}!`
 //     }
 //
 // console.log(person.sayHello())
-
 
 /** TODO:
  *
@@ -82,8 +80,6 @@
 //     }
 //
 // }
-
-
     // shoppers.forEach(function(element,index,array) {
     // console.log(element)
     //

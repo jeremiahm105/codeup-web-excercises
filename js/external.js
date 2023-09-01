@@ -1,4 +1,5 @@
 
+alert("Hello from Javascript")
 alert("Welcome to my Website")
 let favcolor = prompt("What is you favorite color")
 let coloranswer = confirm("Great " + favcolor + " is my favorite color as well!! ")

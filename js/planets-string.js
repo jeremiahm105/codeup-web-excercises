@@ -38,14 +38,9 @@ let planetsString;
 planetsString = planetsArray.join('<br>')  //
 console.log(planetsString);
 
-
-
 let planetString += "</ul>"
 
 for (let i = 0; i < planetsArray.length; i++) {
     planets
 }
-
-
-//
 

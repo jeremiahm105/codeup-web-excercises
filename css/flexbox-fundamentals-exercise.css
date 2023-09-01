@@ -1,3 +1,5 @@
+
+
 * {box-sizing: border-box;}
 
 body {
@@ -33,26 +35,29 @@ h2, h3 {
     background: white;
     padding: 1em;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     /* enter needed declarations here */
-    /*border: 5px solid red;*/
 }
 
 section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     /* enter needed declarations here */
-    display:flex;
 }
 
 section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
+
     /* enter needed declarations here */
-    display:flex;
-    justify-content: space-between;
-    align-items: center
 }
 section:nth-of-type(1) div:last-child {
+    align-self: start;
     /* enter needed declarations here */
-    /*border: 5px solid red;*/
 }
 
 .purple-box {
@@ -62,14 +67,13 @@ section:nth-of-type(1) div:last-child {
 }
 
 .purple-box:nth-of-type(1) {
-    /* enter needed declarations here */
     flex-grow: 2;
+    /* enter needed declarations here */
 }
 
 .purple-box:nth-of-type(2) {
-    /* enter needed declarations here */
     flex-grow: 1;
-
+    /* enter needed declarations here */
 }
 
 .blue-box {
@@ -80,15 +84,15 @@ section:nth-of-type(1) div:last-child {
 
 section:nth-of-type(3) {
     /* enter needed declarations here */
-    /*border: 5px solid red;*/
-    justify-content: end;
 }
 
 section:nth-of-type(3) h3 {
-    /* enter needed declarations here */
-    /*border: 5px solid red;*/
     display: flex;
-    justify-content: start;
+    flex-direction: row;
+    flex-grow: 1;
+    /*parent of orange circles*/
+    /* enter needed declarations here */
+
 }
 
 .orange-circle {
@@ -103,45 +107,42 @@ section:nth-of-type(3) h3 {
     height: 5em;
     width: 5em;
     background: brown;
+    display: flex;
+    flex-grow: 1;
     /* enter needed declarations here */
-    /*border: 5px solid red;*/
-    align-items:;
 }
 
 .large-brown-box:nth-of-type(2) {
     margin: 0 1em;
-    /*border: 5px solid red;*/
 }
 
 section:nth-of-type(5) {
-    /* enter needed declarations here */
-    /*border: 5px solid red;*/
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
+    /*parent of yellow box*/
+    /* enter needed declarations here */
 }
 
 .yellow-box {
     background: yellow;
     width: 2em;
     height: 2em;
-    /*border: 5px solid red;*/
 }
 
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
+    display: flex;
+    flex-wrap: wrap;
     /* enter needed declarations here */
-    /*border: 5px solid red;*/
 }
 
 .grey-box {
     background: grey;
     width: 3em;
     height: 3em;
-
 }
 
 .grey-box:nth-of-type(odd) {
     height: 4em;
-    /*border: 5px solid red;*/
 }
