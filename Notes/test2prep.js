@@ -76,3 +76,69 @@
 //**Loop
 //**Array
 //**Object
+
+// WHILE LOOP
+// syntax keyword () {}
+// let i = 0 //initializer  ---variable runs before and outside the code syntax
+// while (condition) {             ---only condition is placed inside parenthesis
+//     console.log(i) //code block
+//     i++ //final expression  --final expresion is held within the curly brackets
+// }
+
+// let i = 0
+// while (i <= 10) {
+//     console.log(i)
+//     i++
+// }
+
+// array and loops
+
+// let colors = ['red', 'blue', 'green', 'orange']
+// let i = 0
+// while (i < colors.length) {
+//     console.log(`${colors[i]}`);
+//     i++
+// }
+    //remember we access values in array with array name [] box brackets and inside the braket we insert the index number in this case it will be i beasue we want to loop throught he index numbers stating at 0 which is red
+
+// DO While Loop execute at least once
+
+// let i = 0
+// // syntax
+// do {
+//     console.log(`${i}`);
+//     i++
+// } while (i <= 10)
+
+// for arrays use for loops because we kno the number of iterations if not use while or do while for user input
+
+
+// let mph = 0
+// while (mph < 100) {
+//     console.log(`the speed of the car is ${mph}MPH`)
+//     mph = mph + 10
+// }
+
+// create two variables a=1 b=10 print out loops 1 -10 execute at least once
+// let a = 1
+// let b = 10
+//
+// do {
+//     console.log(`${a}`);
+//     a++
+// } while (a <= b)
+
+// FOR LOOP
+
+for (let i = 0; i <= 10; i++) {
+    console.log(i);
+}
+
+// For loop with array
+let character = ['sonic', 'tales', 'mario', 'zelda']
+
+for (let i = 0; i < character.length; i++) {
+    console.log('')
+}
+
+// how to select items in an array: arrayname[]
