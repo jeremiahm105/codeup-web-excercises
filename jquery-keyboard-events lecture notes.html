@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>keyboard events</title>
+</head>
+<body>
+
+<h1>currently you've typed:</h1>
+<div id="currentTypingCode"></div>
+<br>
+<div id="currentTypingStr"></div>
+<button id="refresh">Reset Page (click here)</button>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+<!--↑ ↑ ↓ ↓ ← → ← → b a enter-->
+
+<!--3838404037393739666513-->
+<script>
+    $(function() {
+        let secretPwKeyCode = "7210112170101110114105114";
+        let inputStrKeyCode = "";
+
+        let secretPwCharacters = "makeitred";
+        let inputStrCharacters = "";
+
+        let goodMorning = "103111111100109111114110105110103";
+
+        let
+// uses Arrow function
+        // Original Arrow function
+        // $("body").on("keypress", (event) => {})
+
+        // To make it an Traditional Anonymous function
+        // $("body").on("keypress", (function (event) {
+        // });
+
+    $("body").on("keypress", (event) => {
+        console.log(event);
+        console.log("event object property 'originalEvent':");
+        console.log(event.originalEvent);
+        console.log("keycode: " + event.originalEvent.keyCode);
+        console.log("key: " + event.originalEvent.key);
+
+        inputStrKeyCode += event.originalEvent.keyCode;
+
+        inputStrCharacters += event.originalEvent.key;
+
+        if(inputStrKeyCode === secretPwKeyCode){
+            alert("AWOOOOO FENRIR YOU GOT THE KEYS TO ME CODE");
+            inputStrKeyCode = "";
+            inputStrCharacters = "";
+        }
+
+        if(inputStrCharacters === secretPwCharacters){
+            $("body").css("background-color", "red");
+            inputStrKeyCode = "";
+            inputStrCharacters = "";
+        }
+
+        if(inputStrKeyCode === goodMorning){
+            alert("good morning fenrir!");
+        }
+
+        $("#currentTypingStr").text(inputStrCharacters);
+        $("#currentTypingCode").text(inputStrKeyCode);
+    })
+
+        $("#refresh").on("click", () => {
+            location.reload();
+
+        })
+});
+
+</script>
+</body>
+</html>
