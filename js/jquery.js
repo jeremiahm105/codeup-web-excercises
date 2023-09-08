@@ -46,7 +46,7 @@
     //     Multiple Selectors
     //
     // Combine your selectors that highlight all the h1, p, and li elements.
-    //$('h1, p, li').css("border", "3px solid red")
+    // $('h1, p, li').css("border", "3px solid red")
 // jQuery
     // uses arrow function
     // let alertFunction = () => {

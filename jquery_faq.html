@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQuery Exercise</title>
+  <style>
+    .invisible {
+      visibility: hidden;
+  </style>
+</head>
+<body>
+<div>
+  <h1>Simple Facts About Texas<span>x</span></h1>
+</div>
+<main>
+  <h2>Learn about the state of Texas!</h2>
+  <dl>
+    <dt>What is Texas nick-name</dt>
+    <dd class="">The Lone Star State. </dd>
+
+    <dt>When did it receive Statehood?</dt>
+    <dd class="">1845, The 28th State.</dd>
+
+    <dt>What is the population?</dt>
+    <dd class="">(as of July 2015): 27,469,114.</dd>
+
+    <dt>Whats the capital?</dt>
+    <dd class="">Austin. </dd>
+
+    <dt>Whats the biggest city?</dt>
+    <dd class="">Houston.</dd>
+
+    <dt>Whats the State bird?</dt>
+    <dd class="">Mockingbird.</dd>
+
+    <dt>Whats the state flower?</dt>
+    <dd class="">Bluebonnet.</dd>
+
+    <dt>Whats the abbreviation?</dt>
+    <dd class="">TX. </dd>
+  </dl>
+
+  <button class="click">Click Me</button>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("dd").addClass("invisible")
+
+      $("button").on("click",function(){
+        $("dd").toggleClass("invisible")
+      })
+
+    })
+  </script>
+
+
+
+
+
+</body>
+</html>
