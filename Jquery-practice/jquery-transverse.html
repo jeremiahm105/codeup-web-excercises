@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jquery Intro</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+
+  <style>
+    /*nav {*/
+    /*  !*USED FOR TOOGLE EXAMPLE NOT REQUIRED FOR TOGGLE METHOD TO WORK*!*/
+    /*  display: none;*/
+    /*}*/
+
+    /*.centered {*/
+    /*  text-align: center;*/
+    /*}*/
+    /*.highlighted {*/
+    /*  background-color: #FF0;*/
+    /*}*/
+
+  </style>
+</head>
+<body>
+<nav id="nav-toggle">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Address</a></li>
+    <li><a href="#">options</a></li>
+  </ul>
+</nav>
+
+<h1 class="hello">Hello World</h1>
+
+<p id="para1" class=" p-3 border border-dark m-1">
+  Lorem ipsum dolor sit amet, elit.  <span class="span">Accusamus assumenda  tempore ullam.</span> <span class="span">sint voluptate.</span>
+</p>
+
+<p id="para2" >Lorem ipsum <b>sint ut velit vero vitae </b>voluptatibus?
+</p>
+
+<h3 id="header3" class="ex-toggle  hello-toggle">Student's Fav</h3>
+<ul id="ice-cream-list" class="centered important list1">
+  <li class="list-item">"Banana Royal"</li>
+  <li class="list-item">"Banana Caramel Crunch"</li>
+  <li class="list-item">"Almond Joy Type of Thing *IDK*. . chocolate kind of thing. . ya know"</li>
+</ul>
+
+<h3>National Parks</h3>
+<ul id="national-parks">
+  <li>Arches</li>
+  <li>Badlands</li>
+  <li>Carlsbad Caverns</li>
+  <li>Denali</li>
+  <li>Everglades</li>
+</ul>
+<input type="text" id="input1">
+
+<button id="btn1">text</button>
+
+<br><br>
+<button id="refresh">Reset Page (click here)</button>
+
+
+
+<script>
+  $(document).ready(function () {
+
+
+    //THIS FUNCTION WITH SELECTOR "refresh" RESETS THE PAGE TO ITS ORIGINAL STATE IT USING THE  location.reload() method.
+    // The location is object the url is linked to and the reload the current url. together they reload the current url like a refresh.
+    $("#refresh").on("click", function () {
+      location.reload();
+    });
+
+
+    // TO LOOP THROUGH THE OBJECT USE .each( function (index, element) {}). USE TO TARGET THE NAV LIST ITEMs  AND USE IF CONDITIONAL TO AKE EVERY OTHER LI YELLOW
+    $("li").each(function (index,element) {
+      if (index % 2 !== 0) {
+        $(this).css("background", "lightblue")
+      }
+    })
+
+  //   TO SELECT THE FIRST ELEMENT USE .first()
+    $("li").first().css("background","lightgrey")
+
+
+    // TO SELECT THE children ELEMENT USE .last()
+    $("#national-parks").children().css("background","limegreen")
+
+
+    //$('li').css('background-color', '#FF0');
+    $('li').parent().css('background-color', '#a3a3e1');
+
+    $('li').odd().css('background-color', 'blue');
+    $('li').even().css('background-color', 'purple');
+
+
+
+
+
+  });
+
+</script>
+
+</body>
+</html>
