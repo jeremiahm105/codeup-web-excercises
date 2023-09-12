@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Online Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    </script>
+    <style>
+        .tablecenter{
+            width: 50%;
+            margin: 0 auto;
+            margin-top: 2em;
+        }
+        .button{
+            margin-top: 2em;
+        }
+        .background{
+            background: navy;
+            color: white
+        }
+    </style>
+</head>
+<body class="container text-center mt-4 background">
+
+<h1 class="text-center">My Tool Store</h1>
+
+<table id="products" class="table table-border tablecenter">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<button id="refresh" class="button">Refresh Page</button>
+
+<script>
+(function() {
+    "use strict";
+$(document).ready(function() {
+
+    // TODO: Create an AJAX GET request for the file under data/inventory.json
+    function updateStore () {
+    $.get("data/inventory.json").done(function (data) { //--GET request to inventory.json file
+        console.log(data);                              // --logs the retrieved data to browser
+        $("#insertProducts").html('');                  //--empty body element where the product data will be inserted
+        data.forEach(function (products) {              //iterates through received data and appends each products information as a new                                                     row in the table
+            $("#insertProducts").append(                //product info added via string concat
+                `<tr>
+                <td>${products.title}</td>
+                <td>${products.quantity}</td>
+                <td>${products.price}</td>
+                <td>${products.categories}</td>
+                </tr>`);
+        });
+    });
+}
+    updateStore();                                         //wrapped ajax in a function to easily invoke and                                                            pass to refresh btn
+
+    $("#refresh").on("click", updateStore)                 //pass the function to the event button for action.                                                          No need to create a function for action.
+
+    // $("#refresh").on("click", function () {
+    //     location.reload();
+    // });
+
+
+    // TODO: Take the data from inventory.json and append it to the products table
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+
+});
+})();
+</script>
+
+</body>
+</html>

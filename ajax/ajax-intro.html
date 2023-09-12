@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ajax intro</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        //Put in function that allows us to run the script tag last when we load the page because otherwise all the jquery code will load first. so now whats in the parenthesis will only be loaded after the entire website has been loaded.
+
+        //Now inside the ode below we will include all of our jquery code needed for our website
+        $(document).ready(function () {
+            //jQuery FUNCTION THAT ALLOWS US TO USE AJAX AND GET DATA FROM THE SERVER AND INSERT IT INSIDE OUR WEBSITE USING -- .load
+
+            // Notes: .load Uses 3 parameters:
+            // 1. url --points to path we want to load in,
+            // 2. data we want to include when we want to send a request for data we want to load in
+            // 3.callback which allows us to do something once its done loading in te data
+
+            //Step1: Inside the parenthesis is where we want to insert the data from the server --  the div we created
+            // $("#test").load()
+
+
+             // Step 2: create btn in body outside of div and create a jquery selector event for the button and add th test .load into th function
+
+            // Parameter 1: URL Example
+
+            // $("#btn").on("click",function ( ) {
+            //     $("#test").load("data.txt")
+            // })
+
+            // Parameter 2: Using type inserted two pieces of data inside a string we want to pass on to the url--data.txt document so now we get the data and do something with it --method to pass data
+
+            $("#btn").on("click",function ( ) {
+                $("#test").load("data.txt",
+                    {
+                    Name: "Daniel",
+                    Lastname: "Nielson",
+                })
+            })
+
+            // Parameter 3: Using the callback function- now once we click we give the alert followed by the data.txt data.
+            $("#btn").on("click",function ( ) {
+                $("#test").load("data.txt", {
+                    Name: "Daniel",
+                    Lastname: "Nielson",
+                }, function () {
+                    alert("Hi there")
+                })
+            })
+
+            //Parameter 1--URL: Now we need to fill in the parameter of the load function but first we must add to our div so created a data.txt document so we can create content to put inside of div tags.
+                        //Now after we click the file it includes the new data or paragraph
+            //Parameter 2-- use GET POST DELETE PUT type of request GET is default. After th url use a comma and give the new data package a name in {} followed by colons then a value.
+            //Parameter 3--Callback: piece of code we want to run after the load function. so we create a function and give it a command in this case an alert
+
+
+        });
+    </script>
+</head>
+<body>
+<script>
+  //Ajax only works inside a server --  meaning you need to have a website on a server for it to work. get data from server without refreshing the page.
+  //
+</script>
+
+<!--HOW TO LOAD DATA FROM A SERVER USING AJAX-->
+<div id="test">
+    <p>This is the first content</p>
+</div>
+
+<!--include button outside of the div space because we will be replacing the div content then add to jquery-->
+<button id="btn">Click to change </button>
+
+</body>
+</html>
