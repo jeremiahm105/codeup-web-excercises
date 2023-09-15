@@ -35,7 +35,7 @@ console.log(BASE_CURRENT_WEATHER_URL + `q=Nashville,TN,USA&appid=${WEATHER_MAP_K
 
 // HOW - do I get this weather into the DOM?
 
-$.get(BASE_CURRENT_WEATHER_URL + `q=Nashville,TN,USA&appid=${WEATHER_MAP_KEY}&units=imperial`).done((data) => console.log(data))
+// $.get(BASE_CURRENT_WEATHER_URL + `q=Nashville,TN,USA&appid=${WEATHER_MAP_KEY}&units=imperial`).done((data) => console.log(data))
 $.get(BASE_CURRENT_WEATHER_URL + `q=Anaheim,CA,USA&appid=${WEATHER_MAP_KEY}&units=imperial`).done((data) => {
     // // current temp:
     // console.log(data.main.temp.toFixed(0));
