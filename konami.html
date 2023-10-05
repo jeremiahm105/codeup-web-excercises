@@ -8,19 +8,12 @@
 
 <h1>Konami Exercise:</h1>
 
-
 <div id="currentTypingCode"></div>
 <br>
 <div id="currentTypingStr"></div>
 
-
 <button id="refresh">Reset Page (click here)</button>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-
-<!--↑ ↑ ↓ ↓ ← → ← → b a enter-->
-
-<!--3838404037393739666513-->
 
 <script>
     $(function() {
@@ -30,24 +23,7 @@
         let secretPwCharacters = "konami";
         let inputStrCharacters = "";
 
-// uses Arrow function
-        // Original Arrow function
-        // $("body").on("keypress", (event) => {})
-
-        // To make it an Traditional Anonymous function
-        // $("body").on("keypress", (function (event) {
-        // });
-
-        // have to use keydown method not press
-
-        //-- In body, Looking for a key to be pressed
         $("body").on("keydown", (event) => {
-            // ALL OF THESE CONSOLES ARE NOT REQUIRED FOR THE CODE TO FUNCTION
-            // console.log(event);
-            // console.log("event object property 'originalEvent':");
-            // console.log(event.originalEvent);
-            // console.log("keycode: " + event.originalEvent.keyCode);
-            // console.log("key: " + event.originalEvent.key);
 
             //-- Keycode is saved in inputStrKeyCode -- pulled from the toptal website
             inputStrKeyCode += event.originalEvent.keyCode;
@@ -71,13 +47,9 @@
                 inputStrCharacters = "";
             }
 
-            //-- Calling div with id "" and insert text of char
-            //-- When we start typing the char will display
-            //--Created these two empty divs at the top in order to see the text and the divs are empty
             $("#currentTypingStr").text(inputStrCharacters);
 
             $("#currentTypingCode").text(inputStrKeyCode);
-
 
         })
         // REQUIRED TO RESET THE PAGE

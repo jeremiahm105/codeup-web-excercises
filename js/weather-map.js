@@ -1,3 +1,4 @@
+import {MAPBOX_API_TOKEN, WEATHER_MAP_KEY} from "./keys-module.js"
 
 let accessToken = MAPBOX_API_TOKEN
 mapboxgl.accessToken = accessToken;
@@ -20,7 +21,7 @@ const marker = new mapboxgl.Marker({
 function onDragEnd() {
     const lngLat = marker.getLngLat();
     console.log(lngLat)
-    getWeather(lngLat.lat,lngLat.lng)
+    getWeather(lngLat.lat, lngLat.lng)
 
     map.flyTo({
         center: lngLat,
@@ -31,7 +32,7 @@ function onDragEnd() {
 }
 
 // Function to display weather data.
-function getWeather (lat, lng) {
+function getWeather(lat, lng) {
     $.get('https://api.openweathermap.org/data/2.5/onecall', {
         appid: WEATHER_MAP_KEY,
         lat: lat,
@@ -49,7 +50,7 @@ function getWeather (lat, lng) {
 
             html += `
                     <ul>
-                        <h2>${new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(weekDay)}</h2>
+                        <h2>${new Intl.DateTimeFormat('en-US', {weekday: 'long'}).format(weekDay)}</h2>
                         <div><img src="https://openweathermap.org/img/wn/${data.daily[i].weather[0].icon}@2x.png"/></div>
                         <div style="text">Conditions</div>
                         <li>Temperature High  ${data.daily[i].temp.max.toFixed(0)}°F</li>
@@ -64,7 +65,7 @@ function getWeather (lat, lng) {
         console.log(data);
         $('.card').html(html);
 
-        marker.setLngLat(data.lon,data.lat)
+        marker.setLngLat(data.lon, data.lat)
 
     }).fail(function (error) {
         console.log(error);

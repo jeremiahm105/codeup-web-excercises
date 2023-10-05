@@ -46,6 +46,7 @@
     "use strict";
 $(document).ready(function() {
 
+
     // TODO: Create an AJAX GET request for the file under data/inventory.json
     function updateStore () {
     $.get("data/inventory.json").done(function (data) { //--GET request to inventory.json file
@@ -62,13 +63,35 @@ $(document).ready(function() {
         });
     });
 }
-    updateStore();                                         //wrapped ajax in a function to easily invoke and                                                            pass to refresh btn
+    updateStore();
 
-    $("#refresh").on("click", updateStore)                 //pass the function to the event button for action.                                                          No need to create a function for action.
 
-    // $("#refresh").on("click", function () {
-    //     location.reload();
-    // });
+    function updateStore() {
+        fetch('data/inventory.json')
+            .then(response => {
+
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+                $("#insertProducts").html('');
+                data.forEach(function (products) {
+                    $("#insertProducts").append(
+                        `<tr>
+                <td>${products.title}</td>
+                <td>${products.quantity}</td>
+                <td>${products.price}</td>
+                <td>${products.categories}</td>
+                </tr>`);
+                });
+            });
+
+    }
+
+
+wrapped ajax in a function to easily invoke and                                                            pass to refresh btn
+
+    $("#refresh").on("click", updateStore)                 //pass the function to the event button for action.
 
 
     // TODO: Take the data from inventory.json and append it to the products table
@@ -79,6 +102,7 @@ $(document).ready(function() {
 });
 })();
 </script>
+<script src="js/store-refactor.js"></script>
 
 </body>
 </html>

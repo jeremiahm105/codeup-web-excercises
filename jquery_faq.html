@@ -80,7 +80,7 @@
   <br><br>
 
   <button id="refresh">Reset Page (click here)</button>
-<!--  <button id="font-click" class="click bold">Font-Click</button>-->
+  <button id="font-click" class="click bold">Font-Click</button>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -100,8 +100,6 @@
         $("dd").toggleClass("invisible")
       })
 
-      // Create a button that, when clicked, makes the last li in each ul have a yellow background.
-
 
       // Method Uses .each(index,element) method and addClass()--includes 2 parameters index & element.
       $("#city-click").on('click', function () {
@@ -110,23 +108,15 @@
         });
       });
 
-      // Arrow Function Version
-      // $("#city-click").on('click', () => {
-      //   $("ul").each((index, element) => {
-      //     $(element).children().last().addClass("highlight");
-      //   });
-      // });
-
-
       // When any h3 is clicked, the lis underneath it should be bolded. Use font-weight: bold to achieve this.
       $("h3").on("click", function () {
         $("li").css("font-weight","bold")
       });
 
       // Arrow Function with .next() method
-      // $("h3").on("click",(e) => {
-      //   $(e.target).next().css("font-weight","bold")
-      // })
+      $("h3").on("click",(e) => {
+        $(e.target).next().css("font-weight","bold")
+      })
 
 
       // When any list item is clicked, first li of the parent ul should have a font color of blue.
@@ -135,14 +125,14 @@
       });
 
       // Arrow Function with methods
-      // $('li').on('click', function(e) {
-      //     $(e.target).parent().children().first().css('color', 'blue');
-      // });
+      $('li').on('click', function(e) {
+          $(e.target).parent().children().first().css('color', 'blue');
+      });
 
       // ARROW FUNCTION VERSION--Uses the event.target as the keyword "this" replacement
-      // $("dt").on('click', (e) => {
-      // $(e.target).css("background-color", "yellow")
-      // });
+      $("dt").on('click', (e) => {
+      $(e.target).css("background-color", "yellow")
+      });
 
     });
   </script>

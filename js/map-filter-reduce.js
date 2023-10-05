@@ -70,23 +70,3 @@ let userLongestEmail = users.reduce((longest, {email}) => {
     }, "");
 
 console.log(userLongestEmail);
-
-// or
-
-// let userLongestEmail = users.reduce(function (accum,user) {
-//     return  accum + Math.max(user.email)}, 0);
-// }
-//
-// console.log(userLongestEmail);
-
-
-
-// Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
-
-// let userNames = users.reduce(function (accum,user) {
-//     return accum + user.name.join()
-// }, " ")
-
-
-// Bonus
-// Use .reduce to get the unique list of languages from the list of users.

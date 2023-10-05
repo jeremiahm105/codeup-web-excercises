@@ -34,51 +34,51 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-       //var mainHeader = document.getElementById("main-header"); //could also use querySelector(#main-header)
-        //console.log(mainHeader.innerHTML);
+       var mainHeader = document.getElementById("main-header"); //could also use querySelector(#main-header)
+        console.log(mainHeader.innerHTML);
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        // mainHeader.innerHTML = "JavaScript is Cool"; //updates the html
+        mainHeader.innerHTML = "JavaScript is Cool"; //updates the html
 
         // TODO: Uncomment the next line and get the sub header element by id
-       //var subHeader = document.getElementById("sub-header");
-        //console.log(subHeader); //prints the node
+       var subHeader = document.getElementById("sub-header");
+        console.log(subHeader); //prints the node
 
         // TODO: Set the text color of subHeader to blue
-        // subHeader.style.color = "blue"
+        subHeader.style.color = "blue"
 
         // TODO: Uncomment the next line and get all list items
-        //var listItems = document.querySelectorAll("li");
-        // console.log(listItems);
+        var listItems = document.querySelectorAll("li");
+        console.log(listItems);
 
         // TODO: Set text color on every other list item to grey
-        //     for (var i = 0; i < listItems.length; i++) {
-        //         if (i % 2 !==0) {
-        //             listItems[i].style.color = "grey"
-        //         }
+            for (var i = 0; i < listItems.length; i++) {
+                if (i % 2 !==0) {
+                    listItems[i].style.color = "grey"
+                }
 
         // TODO: Set text color of li with dbid = 1 to blue
-        //         if (listItems[i].getAttribute("data-dbid") === "1") {
-        //             listItems[i].style.color = "blue";
-        //         }
-        //     }
-        // another method for dbid
-        //console.log(listItems[2].getAttribute("data-dbid"));
+                if (listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = "blue";
+                }
+            }
+
+        console.log(listItems[2].getAttribute("data-dbid"));
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        //var subParagraphs = document.getElementsByClassName("sub-paragraph");
-        // console.log(subParagraphs); //prints a HTML collection
-        // console.log(subParagraphs[0]); //could also
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        console.log(subParagraphs);
+        console.log(subParagraphs[0]);
 
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        //subParagraphs[0].textContent = "Mission Accomplished!" //could also use .innerText in place of textContent
+        subParagraphs[0].textContent = "Mission Accomplished!"
 
 
         // TODO: DOM EVENTS EXERCISE: Add 4 buttons to the page. Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place. For example, the first button should set inner html of mainHeader to "JavaScript is Cool"."
 
-        // var defuserButton = document.getElementById('defuser')
-        // defuserButton.addEventListener('click', defuseTheBOM)
+        var defuserButton = document.getElementById('defuser')
+        defuserButton.addEventListener('click', defuseTheBOM)
 
         let mainHeader = document.getElementById("main-header");
 
